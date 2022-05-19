@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Navbar from '../navbar.js'
 import { Box, Container } from "@chakra-ui/react";
-import VoxelDog from "../voxel-dog.js";
 import NoSsr from "../no-ssr.js";
+import dynamic from "next/dynamic";
+import VoxelDogLoader from '../voxel-dog-loader.js'
+const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+    ssr: false,
+    loading: () => <VoxelDogLoader />
+  })
 
 
 
@@ -18,7 +23,7 @@ const Main = ({children, router}) => {
 
             <Container maxW="container.md" pt={14}>
                 <NoSsr>
-                <VoxelDog/>
+                <LazyVoxelDog/>
                 </NoSsr>
          
                 {children}

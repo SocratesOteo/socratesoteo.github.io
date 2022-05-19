@@ -1,7 +1,7 @@
 import {Container, Box, Heading} from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
 import Section from '../components/section'
-import Languages from '../components/languages'
+
 
 const Page = () => {
     return (
@@ -22,17 +22,13 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
             Work
         </Heading>
-        <Paragraph>Finished My Biggest Coding experience with DevMountain, A Bootcamp based in 
-            Lehi, Utah. <br></br>
+        <Paragraph>Finished My Biggest Coding experience with DevMountain, A Programming Bootcamp
+             <br></br>
             Languages learned include Python, Javascript, PHP, PostgresSQL, HTML, CSS.
             Libraries include as Next.js, React, Docker, Webpack
         </Paragraph>
         <br></br>
         <br></br>
-
-        <Paragraph>
-            
-        </Paragraph>
         
         </Container>
     )
